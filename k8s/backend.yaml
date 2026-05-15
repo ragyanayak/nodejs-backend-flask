@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poa-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poa-backend
+  template:
+    metadata:
+      labels:
+        app: poa-backend
+    spec:
+      containers:
+      - name: poa-backend
+        image: docker.io/library/poa-backend:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: poa-backend-svc
+spec:
+  selector:
+    app: poa-backend
+  ports:
+  - port: 5000
+    targetPort: 5000
