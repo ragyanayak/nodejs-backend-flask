@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: poa-backend
-        image: docker.io/library/poa-backend:v1
+        image: docker.io/library/poa-backend:v2
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
