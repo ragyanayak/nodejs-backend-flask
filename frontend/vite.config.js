@@ -6,9 +6,9 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      '/generate-csv': 'http://localhost:5000',
-      '/generate-excel': 'http://localhost:5000',
-      '/health': 'http://localhost:5000',
+      '/generate-csv': 'http://poa-backend-svc:5000',
+      '/generate-excel': 'http://poa-backend-svc:5000',
+      '/health': 'http://poa-backend-svc:5000',
     }
   }
 })
