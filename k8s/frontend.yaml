@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: poa-frontend
-        image: docker.io/library/poa-frontend:v1
+        image: docker.io/library/poa-frontend:v2
         imagePullPolicy: Never
         ports:
         - containerPort: 80
